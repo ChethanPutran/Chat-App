@@ -1,0 +1,21 @@
+<div class="online-user-container">
+    <% connections.forEach((value, index, array) => { %>
+        <div class="users">
+            <img 
+                class="user-img img-fluid" 
+                src="<%= value.user_id.profile_pic_url%>" 
+                alt="profile"
+            >
+            
+            <div class="user-details" id="<%= value.user_id._id %>">
+                <div class="user-name">
+                    <%= value.user_id.firstname %> <%= value.user_id.lastname %>
+                </div>
+                <div class="user-msg-last">
+                    this is last msg..
+                </div>
+                <span class="online-dot"></span>
+            </div>
+        </div>
+    <% }); %>
+</div>

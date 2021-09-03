@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>Welcome to Chit-Chat</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="joinCard">
+        <div class="joinForm">
+          <h1>Chit-Chat</h1>
+          <form action="/chat">
+            <div>
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                name="username"
+                placeholder="Your name here"
+                required
+              /></div>
+            <div>
+              <label for="room">Room</label>
+              <input
+                type="text"
+                name="room"
+                placeholder="Your room number here"
+                required="required"
+                autocomplete="off"
+              /></div>
+            <div>
+              <button type="submit">
+                Join
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

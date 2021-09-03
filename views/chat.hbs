@@ -1,0 +1,83 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/chat.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="authorized" class="container">
+      <div class="toolTip">New user joined!</div>
+      <div class="topBar">
+        <div class="left">
+          <h1 style="text-align: center">WELCOME</h1>
+
+        </div>
+        <div class="right"><ul class="datas">
+            <li>
+            </li>
+            <li>
+              <h3 class="username">
+              </h3>
+            </li>
+            <li>
+              <h3>Room No.<span
+                  class="roomNum"
+                  style="color: black"
+                ></span></h3>
+            </li>
+          </ul></div>
+
+      </div>
+      <div class="chat">
+        <div class="sideBar">
+
+        </div>
+        <div class="chatContainer">
+          <div class="messageArea">
+
+          </div>
+          <div class="msgInputArea">
+            <div class="msgForm">
+              <form action="/" method="POST" id="msgForm">
+                <button id="emojiBtn"><i class="far fa-grin-alt"></i></button>
+                <input
+                  type="text"
+                  placeholder="Type your message..."
+                  name="message"
+                  id="message"
+                  title="Type something..."
+                  spellcheck="true"
+                  autocomplete="off"
+                />
+                <button class="shareLoc" title="Share Location"><i
+                    class="fas fa-map-marker-alt"
+                  ></i></button>
+                <button id="sendMsgButton" class="sendBtn" title="Send"><i
+                    class="fab fa-telegram sendIcon disabled"
+                  ></i></button>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/fgEmojiPicker.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/js/chat.js"></script>
+
+  </body>
+
+</html>
