@@ -25,13 +25,12 @@ const emojiPicker = new FgEmojiPicker({
 });
 
 //Handling user
-const params = new URLSearchParams(location.search);
-const username = params.get("username");
-const room = params.get("room");
+const sessionStorage = window.sessionStorage;
+const username = sessionStorage.getItem('username');
 
-if (!username || !params) {
-  errorHandler(`❗🚫Usename and Room number are required🚫❗`);
-}
+const room = sessionStorage.getItem('room');
+
+
 
 //Helper Functions
 const errorHandler = (text) => {
@@ -213,6 +212,12 @@ const toggleToolTip = (text = "") => {
   toolTip.classList.toggle("showToolTip");
   toolTip.innerHTML = text;
 };
+
+
+if (!username || !room) {
+  errorHandler(`❗🚫Usename and Room number are required🚫❗`);
+}
+
 
 //Updating UI for the first time
 // updateUI();

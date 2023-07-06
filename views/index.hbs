@@ -11,7 +11,7 @@
       <div class="joinCard">
         <div class="joinForm">
           <h1>Chit-Chat</h1>
-          <form action="/chat">
+          <form action="/chat" method="post" id='chatForm'>
             <div>
               <label for="name">Your Name</label>
               <input
@@ -30,7 +30,7 @@
                 autocomplete="off"
               /></div>
             <div>
-              <button type="submit">
+              <button type="submit" id="submitbtn">
                 Join
               </button>
             </div>
@@ -40,4 +40,18 @@
     </div>
 
   </body>
+  <script>
+    const btn = document.getElementById('submitbtn');
+    const chatForm = document.getElementById('chatForm');
+
+    const handleUser =(event)=>{
+      event.preventDefault();
+      const sessionStorage  = window.sessionStorage;
+      sessionStorage.setItem('username',chatForm.elements['username'].value);
+      sessionStorage.setItem('room',chatForm.elements['room'].value);
+      chatForm.submit();
+    }
+
+    btn.addEventListener('click',handleUser)
+  </script>
 </html>

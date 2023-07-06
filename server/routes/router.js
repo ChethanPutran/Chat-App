@@ -9,7 +9,7 @@ const axios = require("axios");
 router.get("/", (req, res) => {
   res.render("index");
 });
-router.get("/chat", (req, res) => {
+router.post("/chat", (req, res) => {
   res.render("chat");
 });
 router.get("/auth", (req, res) => {

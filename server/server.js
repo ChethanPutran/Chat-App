@@ -8,15 +8,12 @@ dotenv.config({ path: "../config.env" });
 const router = require("./routes/router");
 const generateMessage = require("./modals/msg");
 const Filter = require("bad-words");
-const hbs = require("hbs");
 const {
   addUser,
-  getRoomByUserId,
   getUserCount,
   removeUser,
   getUsersByRoom,
 } = require("./users");
-const { use } = require("./routes/router");
 
 const port = 3000 || process.env.PORT;
 
